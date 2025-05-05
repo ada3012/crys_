@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="multimedia/logo_1er.png" rel="icon">   
+    <title>Inicio</title>
+    <link href="css/BOOSTRAP/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+    <menu>
+        <ul>
+            <li>
+                <img src="multimedia/logo_1er.png" class="primer_logo" alt="logo">
+            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tu_casa.html">Tu casa</a></li>
+            <li><a href="ubicacion.html">Camino a casa</a></li>
+            <li><a href="camino.html">Mis primeros pasos</a></li>
+            <li><a href="servicios.html">Predicas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </menu>
+
+    <div class="video-container">
+        <video autoplay muted loop>
+          <source src="multimedia/video_prueba.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+        <div class="content">
+            <h1>Texto encima del video</h1>
+            <p>¡Puedes personalizar este texto!</p>
+        </div>
+    </div>
+
+    <div class="carrusel-section">
+        <div class="container">
+            <div class="carrusel-container">
+                <div class="imagen">
+                    <img src="multimedia/imagen_1.jpg" alt="imagen_1">
+                    <span class="carrusel_title">Texto para la imagen 1</span>
+                </div>
+                <div class="imagen">
+                    <img src="multimedia/imagen_2.webp" alt="imagen_2">
+                    <span class="carrusel_title">Texto para la imagen 2</span>
+                </div>
+                <div class="imagen">
+                    <img src="multimedia/imagen_3.png" alt="imagen_3">
+                    <span class="carrusel_title">Texto para la imagen 3</span>
+                </div>
+            </div>
+            <div class="carrusel-nav">
+                <button class="nav-btn" onclick="moverCarrusel(-1)">⬅️</button>
+                <button class="nav-btn" onclick="moverCarrusel(1)">➡️</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-section">
+        <div class="container">
+            <h2>ACTIVIDADES DE LA IGLESIA LOCAL
+            </h2>
+        </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
