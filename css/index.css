@@ -81,6 +81,7 @@ video {
 
 /* Texto encima del video */
 .content {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -147,4 +148,15 @@ video {
 .nav-btn:hover {
     background-color: rgba(255, 255, 255, 0.7);
     color: black;
+}
+
+.CRYS{
+    font-family: "Paris";
+    font-size: 6rem;
+}
+
+.eslogan{
+    font-family:"Escrito";
+    font-size: 4rem;
+    color: rgb(219, 199, 95);
 }
