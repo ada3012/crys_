@@ -1,4 +1,8 @@
-/* General */
+@import url("../css/fonts.css");
+
+li{
+font-family:"Montserrat-Medium";
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
