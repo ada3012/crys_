@@ -63,7 +63,6 @@ menu ul li img {
           <li><a href="index.html">INICIO</a></li>
           <li><a href="tu_casa.html">TU CASA</a></li>
           <li><a href="ubicacion.html">CAMINO A CASA</a></li>
-          <li><a href="contacto.html">MIS PRIMEROS PASOS</a></li>
           <li><a href="servicios.html">PREDICAS</a></li>
           <li><a href="contacto.html">CONTACTO</a></li>
         </ul>

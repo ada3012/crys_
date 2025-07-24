@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embed de Facebook - Casa de Reyes</title>
+  <style>
+    /* Opcional: Asegura que el contenedor no exceda el ancho de la pantalla */
+    body {
+      margin: 0;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .fb-container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="fb-container">
+    <!-- SDK de Facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0">
+    </script>
+
+    <!-- Plugin de la página -->
+    <div class="fb-page" 
+         data-href="https://www.facebook.com/casadereyesOFICIAL" 
+         data-tabs="timeline" 
+         data-width="500" 
+         data-height="600" 
+         data-small-header="false" 
+         data-adapt-container-width="true" 
+         data-hide-cover="false" 
+         data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/casadereyesOFICIAL" 
+                  class="fb-xfbml-parse-ignore">
+        <a href="https://www.facebook.com/casadereyesOFICIAL">Casa de Reyes OFICIAL</a>
+      </blockquote>
+    </div>
+  </div>
+</body>
+</html>
