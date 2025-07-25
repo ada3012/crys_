@@ -160,3 +160,21 @@ video {
     font-size: 4rem;
     color: rgb(219, 199, 95);
 }
+
+@media (max-width: 768px) {
+    .CRYS {
+        font-size: 3rem;
+        padding: 0 10px;
+    }
+
+    .eslogan {
+        font-size: 2rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    h1, p {
+        word-break: break-word;
+        text-align: center;
+    }
+}

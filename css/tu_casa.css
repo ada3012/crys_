@@ -4,7 +4,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-    color: #333;
+    color: #333;   
+}
+
+.container{
+   text-align: center;
+   color: #1a535c;
+   font-family: 'Franklin Gothic Medium';
 }
 
 h1 {

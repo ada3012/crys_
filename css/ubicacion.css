@@ -58,3 +58,15 @@ menu ul li img {
     margin-right: 20px;
 }
 
+.Texto{
+    text-align: center;
+    color: #1a535c;
+    font-family: "Montserrat-Medium";;
+}
+
+.map-container{
+    text-align: center;
+    margin: 20px auto;
+    align-items: center;
+    color: #1a535c;
+}
