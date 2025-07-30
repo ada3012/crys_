@@ -70,6 +70,15 @@ class Menu extends HTMLElement {
           transform: scale(1.1);
           box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
         }
+          .boton_mod_dark {
+          margin-left: 10px;
+          padding: 8px 16px; 
+          border-radius: 20px; 
+          border: none; 
+          background-color: #3498db; 
+          color: white; 
+          font-weight: bold; cursor: pointer;"
+  }
 
     @media (max-width: 768px) {
   .menu-toggle {
@@ -105,7 +114,6 @@ class Menu extends HTMLElement {
     margin-right: 0px;
     }
 }
-
       </style>
 
       <slot>
@@ -120,6 +128,7 @@ class Menu extends HTMLElement {
             <li><a href="ubicacion.html">CAMINO A CASA</a></li>
             <li><a href="servicios.html">PREDICAS</a></li>
             <li><a href="contacto.html">CONTACTO</a></li>
+            <li><button id="modo-btn" class="boton_mod_dark">Modo nocturno</button></li>
           </ul>
         </menu>
       </slot>
@@ -127,6 +136,7 @@ class Menu extends HTMLElement {
 
     this.markActiveLink();
     this.setupToggleMenu();
+    this.setupDarkModeToggle();
   }
 
   markActiveLink() {
@@ -168,6 +178,28 @@ class Menu extends HTMLElement {
       });
     });
   }
+
+  setupDarkModeToggle() {
+  const btn = this.shadowRoot.querySelector("#modo-btn");
+
+  if (!btn) return;
+
+  const updateText = (isDark) => {
+    btn.textContent = isDark ? "Modo claro" : "Modo nocturno";
+  };
+
+  // Al cargar: aplicar modo oscuro si estaba activado
+  const isDark = localStorage.getItem("dark-mode") === "true";
+  document.body.classList.toggle("dark-mode", isDark);
+  updateText(isDark);
+
+  // Al hacer clic en el botón
+  btn.addEventListener("click", () => {
+    const isNowDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", isNowDark);
+    updateText(isNowDark);
+  });
+}
 }
 
 customElements.define('main-menu', Menu);

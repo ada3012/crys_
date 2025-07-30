@@ -10,6 +10,8 @@
 </head>
 <body>
     <main-menu></main-menu>
+    <button onclick="toggleDarkMode()">Cambiar a modo nocturno</button>
+
 
     <div class="video-container">
         <video autoplay muted loop>
@@ -47,5 +49,21 @@
 
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+  // Al cargar la página
+  window.onload = function() {
+    if (localStorage.getItem("dark-mode") === "true") {
+      document.body.classList.add("dark-mode");
+    }
+  };
+
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+    localStorage.setItem("dark-mode", body.classList.contains("dark-mode"));
+  }
+</script>
+
+
 </body>
 </html>

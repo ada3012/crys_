@@ -70,3 +70,31 @@ menu ul li img {
     align-items: center;
     color: #1a535c;
 }
+
+.ubi{
+    width: 80%;
+}
+
+@media (max-width: 425px) {
+    menu ul {
+        flex-direction: column;
+    }
+    
+    menu ul li {
+        margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    .ubi{
+        width: 250px;
+        height: 300px;
+        border-radius: 10px;
+    }
+}
