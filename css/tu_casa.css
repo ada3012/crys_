@@ -170,6 +170,20 @@ body.dark-mode menu ul li a:hover {
   background-color: #bb86fc;
   color: #000;
 }
+
+body.dark-mode .main-title {
+    font-family: 'escrito';
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #D4AF37;
+}
+
+body.dark-mode .intro-text {
+    font-size: 2.2rem;
+    font-family: 'escrito';
+    color: #D4AF37;
+}
  
 button {
   background-color: #1a535c;
@@ -188,5 +202,11 @@ button:hover {
 body.dark-mode button {
   background-color: #90caf9;
   color: #000;
+}
+
+.promesas details .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 

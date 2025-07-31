@@ -139,33 +139,51 @@
 
   </body>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const detailsElements = document.querySelectorAll('.promesas details');
+ document.addEventListener('DOMContentLoaded', () => {
+  const detailsElements = document.querySelectorAll('.promesas details');
 
-    detailsElements.forEach((detail) => {
-      const content = detail.querySelector('p');
-      if (content) {
-        content.style.maxHeight = '0';
-        content.style.overflow = 'hidden';
-        content.style.transition = 'max-height 0.5s ease';
-      }
+  detailsElements.forEach((detail) => {
+    const content = detail.querySelector('.content');
 
-      detail.addEventListener('toggle', () => {
-        if (detail.open) {
-          detailsElements.forEach((other) => {
-            if (other !== detail) {
-              other.open = false;
-              const otherContent = other.querySelector('p');
-              if (otherContent) otherContent.style.maxHeight = '0';
+    // Inicializamos estilos
+    if (content) {
+      content.style.maxHeight = '0';
+      content.style.overflow = 'hidden';
+      content.style.transition = 'max-height 0.5s ease';
+    }
+
+    // Interceptamos el click manualmente
+    const summary = detail.querySelector('summary');
+    if (summary && content) {
+      summary.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita el toggle automático de <details>
+
+        const isOpen = detail.hasAttribute('open');
+
+        // Cerrar todos
+        detailsElements.forEach((other) => {
+          if (other !== detail) {
+            other.removeAttribute('open');
+            const otherContent = other.querySelector('.content');
+            if (otherContent) {
+              otherContent.style.maxHeight = '0';
             }
-          });
+          }
+        });
 
-          if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        if (isOpen) {
+          // Cerrar actual
+          detail.removeAttribute('open');
+          content.style.maxHeight = '0';
         } else {
-          if (content) content.style.maxHeight = '0';
+          // Abrir actual
+          detail.setAttribute('open', '');
+          content.style.maxHeight = content.scrollHeight + 'px';
         }
       });
-    });
+    }
   });
+});
+
 </script>
 </html>

@@ -75,6 +75,55 @@ menu ul li img {
     width: 80%;
 }
 
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .container {
+  color: #cfd8dc;
+}
+
+body.dark-mode .section {
+  background: #1e1e1e;
+}
+
+body.dark-mode .section-title {
+  color: #90caf9;
+  border-bottom: 2px solid #90caf9;
+}
+
+body.dark-mode menu {
+  background-color: #0d1b2a;
+}
+
+body.dark-mode menu ul li a {
+  color: #eceff1;
+}
+
+body.dark-mode menu ul li a:hover {
+  background-color: #bb86fc;
+  color: #000;
+}
+
+body.dark-mode .er_parrafo{
+    font-family: 'escrito';
+    font-size: 5.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #D4AF37;
+    padding: 0;
+    margin: 0;
+}
+
+body.dark-mode .intro-text {
+    font-size: 2.2rem;
+    font-family: 'escrito';
+    color: #D4AF37;
+}
+
+
 @media (max-width: 425px) {
     menu ul {
         flex-direction: column;
