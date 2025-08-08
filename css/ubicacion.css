@@ -141,9 +141,18 @@ body.dark-mode .intro-text {
         font-size: 1.2rem;
     }
 
-    .ubi{
+    .ubi {
         width: 250px;
         height: 300px;
         border-radius: 10px;
     }
+
+     .er_parrafo {
+        font-size: 2.2rem;
+    }
+
+    body.dark-mode .er_parrafo {
+        font-size: 3rem;
+    }
+    
 }

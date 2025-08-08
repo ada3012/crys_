@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="multimedia/logo_1er.png" rel="icon">   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="multimedia/logo_1er.png" rel="icon" />
     <title>Inicio</title>
-    <link href="css/BOOSTRAP/bootstrap.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-</head>
-<body>
+    <link href="css/BOOSTRAP/bootstrap.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body>
     <main-menu></main-menu>
 
-
     <div class="video-container">
-        <video autoplay muted loop>
-          <source src="multimedia/video_prueba.mp4" type="video/mp4">
-          Tu navegador no soporta el video.
-        </video>
-        <div class="content">
-            <h1 class="CRYS">Casa de reyes y sacerdotes</h1>
-            <p class="eslogan">Un lugar donde el amor une las familias</p>
-        </div>
+      <video autoplay muted loop>
+        <source src="multimedia/video_prueba.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+      <div class="content">
+        <h1 class="CRYS">Casa de reyes y sacerdotes</h1>
+        <p class="eslogan">Un lugar donde el amor une las familias</p>
+      </div>
     </div>
 
     <div class="carrusel-section">
-        <div class="container">
-            <div class="carrusel-container">
-                <div class="imagen">
-                    <img src="multimedia/imagen_1.jpg" alt="imagen_1">
-                    <span class="carrusel_title">Texto para la imagen 1</span>
-                </div>
-                <div class="imagen">
-                    <img src="multimedia/imagen_2.webp" alt="imagen_2">
-                    <span class="carrusel_title">Texto para la imagen 2</span>
-                </div>
-                <div class="imagen">
-                    <img src="multimedia/imagen_3.png" alt="imagen_3">
-                    <span class="carrusel_title">Texto para la imagen 3</span>
-                </div>
-            </div>
-            <div class="carrusel-nav">
-                <button class="nav-btn" onclick="moverCarrusel(-1)">⬅️</button>
-                <button class="nav-btn" onclick="moverCarrusel(1)">➡️</button>
-            </div>
+      <div class="container">
+        <div class="carrusel-container">
+          <div class="imagen" data-text="Ministerio de mujeres enfocado en restaurar, edificar y fortalecer a cada mujer. esto se hace cada fin de mes, una reunion donde pueden hablar sobre el misniterio de mujeres, compartir experiencias y aprender más sobre la palabra de Dios.">
+            <img src="multimedia/departamentos/mujeres_departamento.JPG"alt="imagen_1"/>
+            <span class="carrusel_title">Departamento de Mujeres:</span>
+          </div>
+
+          <div class="imagen" data-text="Hombres comprometidos a liderar con integridad, fe y amor. Este espacio se hace cada fin de mes, donde pueden hablar sobre el ministerio de hombres, compartir experiencias y aprender más sobre la palabra de Dios. Atraves de los estudios biblicos, los hombres pueden crecer en su fe y liderazgo.">
+            <img src="multimedia/departamentos/caballeros_departamento.JPG" alt="imagen_2"/>
+            <span class="carrusel_title">Departamentos de Caballeros:</span>
+          </div>
+
+          <div class="imagen" data-text="Jóvenes que buscan a Dios con pasión y propósito. Este espacio se hace cada fin de mes, donde pueden hablar sobre el ministerio de jóvenes, compartir experiencias y aprender más sobre la palabra de Dios. A través de los estudios bíblicos, los jóvenes pueden crecer en su fe y liderazgo. Para que tengan un ministerio activo y comprometido.">
+            <img src="multimedia/departamentos/jovenes.JPG" alt="imagen_3" />
+            <span class="carrusel_title">Departamento de Jovenes:</span>
+          </div>
+
+          <div class="imagen" data-text="Espacio dedicado a la enseñanza y formación espiritual de los preadolescentes. Un lugar donde pueden aprender sobre la palabra de Dios, compartir experiencias y crecer en su fe. Este espacio se hace cada Domingo, donde pueden hablar sobre el ministerio de preadolescentes, compartir experiencias y aprender más sobre la palabra de Dios.">
+            <img src="multimedia/departamentos/salon.JPG" alt="imagen_4" />
+            <span class="carrusel_title">Salon de nuestros Preadolecentes:</span>
+          </div>
+
+          <div class="imagen" data-text="Lugar de aprendizaje, juegos y amor para los niños. Un espacio donde pueden aprender sobre la palabra de Dios, compartir experiencias y crecer en su fe. Este espacio se hace cada Domingo, donde pueden hablar sobre el ministerio de niños, compartir experiencias y aprender más sobre la palabra de Dios. Con maestros y atencion para nuestros niños.">
+            <img src="multimedia/departamentos/niños.JPG" alt="imagen_5" />
+            <span class="carrusel_title">Salon de nuestros niños:</span>
+          </div>
+
+          <div class="imagen" data-text="Cuidado especial y lleno de ternura para los más pequeños. Donde las y los maestros brindar amor, atencion y sobre todo cuidado a nuestros pequeños. Este espacio se hace cada Domingo, donde pueden hablar sobre el ministerio de pequeños, compartir experiencias y aprender más sobre la palabra de Dios haciendo amigos en la casa de Dios.">
+            <img src="multimedia/departamentos/babys.JPG" alt="imagen_6" />
+            <span class="carrusel_title">Salon de nuestros mas pequeños:</span>
+          </div>
         </div>
+        <div class="carrusel-nav">
+          <button class="nav-btn" onclick="moverCarrusel(-1)">⬅️</button>
+          <button class="nav-btn" onclick="moverCarrusel(1)">➡️</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para imágenes del carrusel -->
+    <div id="imagenModal" class="modal">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <img class="modal-contenido" id="modalImg" />
+      <div id="modalTexto"></div>
     </div>
 
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
-    <script>
-  // Al cargar la página
-  window.onload = function() {
-    if (localStorage.getItem("dark-mode") === "true") {
-      document.body.classList.add("dark-mode");
-    }
-  };
-
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-    localStorage.setItem("dark-mode", body.classList.contains("dark-mode"));
-  }
-</script>
-
-
-</body>
+  </body>
 </html>

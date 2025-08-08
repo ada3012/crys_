@@ -84,7 +84,6 @@ class Menu extends HTMLElement {
   .menu-toggle {
     display: block;
   }
-
   .nav-list {
     max-height: 0;
     opacity: 0;
@@ -110,10 +109,16 @@ class Menu extends HTMLElement {
     margin: 10px 0;
     text-align: center;
   }
-    img{
+    .nav-list li img{
     margin-right: 0px;
     }
 }
+
+     @media (max-width: 1024px) {
+     menu{
+    text-align: center;
+  }
+  }
       </style>
 
       <slot>

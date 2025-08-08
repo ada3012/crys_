@@ -79,3 +79,16 @@ body.dark-mode menu ul li a:hover {
   background-color: #bb86fc;
   color: #000;
 }
+
+@media (max-width: 768px) {
+  .redes{
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .redes_div, .redes_div_2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
