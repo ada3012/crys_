@@ -276,3 +276,24 @@ body.dark-mode .cerrar {
 .imagen {
     touch-action: manipulation; /* Permite manipulación táctil */
 }
+
+.carrusel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    touch-action: pan-y; /* Permite desplazamiento vertical normal y gestos horizontales */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    touch-action: pan-y; /* permite swipe horizontal */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    touch-action: pan-y; /* permite deslizar horizontalmente */
+}

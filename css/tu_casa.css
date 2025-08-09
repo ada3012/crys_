@@ -9,7 +9,7 @@ body {
 
 .container{
    text-align: center;
-   color: #1a535c;
+   color: #000000;
    font-family: 'Franklin Gothic Medium';
 }
 
@@ -118,7 +118,13 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
   }
-  
+
+  .promesas{
+    background-image: url('../multimedia/promesas.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   .section:hover {
     transform: scale(1.02);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
@@ -146,7 +152,7 @@ body.dark-mode {
 }
 
 body.dark-mode .container {
-  color: #cfd8dc;
+  color: #1eece2;
 }
 
 body.dark-mode .section {

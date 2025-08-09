@@ -72,4 +72,63 @@
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
   </body>
+  <script>
+const carrusel = document.querySelector(".carrusel-container");
+const imagenes = document.querySelectorAll(".imagen");
+const carruselWrapper = document.querySelector(".container");
+
+let index = 0;
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+let translateX = 0;
+
+// Muestra imagen según índice
+function mostrarImagen(i) {
+    carrusel.style.transition = "transform 0.3s ease-in-out";
+    carrusel.style.transform = `translateX(-${i * 100}%)`;
+}
+
+// Botones
+document.querySelector(".nav-btn.prev").addEventListener("click", () => {
+    index = (index - 1 + imagenes.length) % imagenes.length;
+    mostrarImagen(index);
+});
+
+document.querySelector(".nav-btn.next").addEventListener("click", () => {
+    index = (index + 1) % imagenes.length;
+    mostrarImagen(index);
+});
+
+// Inicio de toque
+carruselWrapper.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    carrusel.style.transition = "none"; // Sin animación mientras arrastras
+});
+
+// Movimiento de toque
+carruselWrapper.addEventListener("touchmove", e => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+    let deltaX = currentX - startX;
+    translateX = -index * 100 + (deltaX / carruselWrapper.offsetWidth) * 100;
+    carrusel.style.transform = `translateX(${translateX}%)`;
+});
+
+// Fin de toque
+carruselWrapper.addEventListener("touchend", () => {
+    isDragging = false;
+    let movedPercent = (currentX - startX) / carruselWrapper.offsetWidth;
+
+    if (movedPercent > 0.2) {
+        index = (index - 1 + imagenes.length) % imagenes.length; // anterior
+    } else if (movedPercent < -0.2) {
+        index = (index + 1) % imagenes.length; // siguiente
+    }
+
+    mostrarImagen(index);
+});
+
+</script>
 </html>
